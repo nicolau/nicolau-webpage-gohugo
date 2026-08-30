@@ -1,0 +1,15 @@
+Source	Target
+Me	Dry lab
+Me	Wet lab
+Wet lab	Culture cells
+Culture cells	LLCMK2
+Culture cells	Macrophages
+Culture cells	Bone marrow
+Culture cells	Trypanosoma cruzi
+Wet lab	Molecular biology
+Molecular biology	qPCR
+Molecular biology	RT
+Dry lab	Machine learning
+Dry lab	Bulk sequencing
+Dry lab	Single-cell sequencing
+Dry lab	Integrative analysis

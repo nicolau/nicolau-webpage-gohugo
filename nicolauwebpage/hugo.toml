@@ -2,3 +2,53 @@ baseURL = 'https://nicolau.github.io/'
 locale = 'en-us'
 title = 'Dr Andre NA Goncalves'
 theme='PaperMod'
+
+enableRobotsTXT= true
+
+[params]
+  env = "production"
+  author = "Nicolau"
+  description = "Nicolau's personal website"
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+
+  [params.profileMode]
+    enabled = true
+    title = "Hi, I'm Nicolau"
+    subtitle = "Developer, maker, and curious human."
+    imageUrl = "/images/profile.jpg"
+    imageWidth = 160
+    imageHeight = 160
+    imageTitle = "Nicolau"
+
+    [[params.profileMode.buttons]]
+      name = "Blog"
+      url = "posts"
+
+    [[params.profileMode.buttons]]
+      name = "About"
+      url = "about"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/nicolau"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:hello@example.com"
+
+[menu]
+  [[menu.main]]
+    identifier = "publications"
+    name = "Publications"
+    url = "/publications/"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 20
