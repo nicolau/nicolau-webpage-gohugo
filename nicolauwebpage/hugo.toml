@@ -1,0 +1,4 @@
+baseURL = 'https://nicolau.github.io/'
+locale = 'en-us'
+title = 'Dr Andre NA Goncalves'
+theme='PaperMod'
