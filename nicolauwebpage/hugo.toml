@@ -7,7 +7,7 @@ enableRobotsTXT= true
 
 [params]
   env = "production"
-  author = "Nicolau"
+  author = "Andre Goncalves"
   description = "Nicolau's personal website"
   defaultTheme = "auto"
   ShowReadingTime = true
