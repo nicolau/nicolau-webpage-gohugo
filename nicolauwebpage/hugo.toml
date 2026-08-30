@@ -17,12 +17,12 @@ enableRobotsTXT= true
 
   [params.profileMode]
     enabled = true
-    title = "Hi, I'm Nicolau"
-    subtitle = "Developer, maker, and curious human."
-    imageUrl = "/images/profile.jpg"
+    title = "Hi, I'm Andre Goncalves"
+    subtitle = "Senior postdoc and computational biologist. Developer, maker, and curious human."
+    imageUrl = "/images/general/profile.jpg"
     imageWidth = 160
     imageHeight = 160
-    imageTitle = "Nicolau"
+    imageTitle = "Andre Goncalves"
 
     [[params.profileMode.buttons]]
       name = "Blog"
@@ -38,7 +38,7 @@ enableRobotsTXT= true
 
   [[params.socialIcons]]
     name = "email"
-    url = "mailto:hello@example.com"
+    url = "mailto:andre.goncalves@paediatrics.ox.ac.uk"
 
 [menu]
   [[menu.main]]
@@ -48,7 +48,13 @@ enableRobotsTXT= true
     weight = 10
 
   [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 20
+
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 20
+    weight = 30

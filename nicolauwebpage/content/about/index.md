@@ -5,4 +5,25 @@ slug = "about"
 draft = false
 +++
 
-I also create hand-drawn infographics and illustrations to summarize the key concepts in data science, machine learning and bioinformatics.
+## Research network
+
+{{< network >}}
+flowchart LR
+    Me["Me"] --> DryLab["Dry lab"]
+    Me["Me"] --> WetLab["Wet lab"]
+
+    WetLab --> Culture["Culture cells"]
+    Culture --> LLCMK2["LLCMK2"]
+    Culture --> Macrophages["Macrophages"]
+    Culture --> BoneMarrow["Bone marrow"]
+    Culture --> Tcruzi["Trypanosoma cruzi"]
+
+    WetLab --> Molecular["Molecular biology"]
+    Molecular --> qPCR["qPCR"]
+    Molecular --> RT["RT"]
+
+    DryLab --> ML["Machine learning"]
+    DryLab --> Bulk["Bulk sequencing"]
+    DryLab --> SingleCell["Single-cell sequencing"]
+    DryLab --> Integrative["Integrative analysis"]
+{{< /network >}}
