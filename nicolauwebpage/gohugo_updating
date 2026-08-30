@@ -1,0 +1,16 @@
+# Creating a new publicatoin
+copy the latest [YEAR]-paperXX.md file and update the metadata and content accordingly.
+
+# Update modifications in nicolauwebpage repository
+git add content/publications/2023-paper22.md
+git commit -m "Update publication 2023-paper22.md metadata and content"
+git push
+
+# Compile the website with Hugo
+hugo -t PaperMod
+
+# Access public folder
+git status
+git add .
+git commit -m "Update public folder after Hugo build"
+git push
