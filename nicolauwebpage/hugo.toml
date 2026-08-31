@@ -1,6 +1,6 @@
 baseURL = 'https://nicolau.github.io/'
 locale = 'en-us'
-title = 'Dr Andre NA Goncalves'
+title = 'PhD Andre NA Goncalves'
 theme='PaperMod'
 
 enableRobotsTXT= true
@@ -8,7 +8,7 @@ enableRobotsTXT= true
 [params]
   env = "production"
   author = "Andre Goncalves"
-  description = "Nicolau's personal website"
+  description = "Andre's personal website"
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowShareButtons = true
@@ -19,10 +19,10 @@ enableRobotsTXT= true
     enabled = true
     title = "Hi, I'm Andre Goncalves"
     subtitle = "Senior postdoc and computational biologist. Developer, maker, and curious human."
-    imageUrl = "/images/general/profile.jpg"
+    imageUrl = "/images/general/profile.png"
     imageWidth = 160
     imageHeight = 160
-    imageTitle = "Andre Goncalves"
+    imageTitle = "PhD Andre Goncalves"
 
     [[params.profileMode.buttons]]
       name = "Blog"
@@ -39,6 +39,10 @@ enableRobotsTXT= true
   [[params.socialIcons]]
     name = "email"
     url = "mailto:andre.goncalves@paediatrics.ox.ac.uk"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/andre-nicolau-aquime-goncalves/"
 
 [menu]
   [[menu.main]]

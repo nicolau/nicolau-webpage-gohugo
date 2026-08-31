@@ -1,7 +1,7 @@
 +++
 title = "Projects"
 date = '2026-08-30T22:41:05+01:00'
-draft = true
+draft = false
 author = "Andre Goncalves"
 +++
 
