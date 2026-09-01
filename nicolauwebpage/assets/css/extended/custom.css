@@ -1,0 +1,4 @@
+.mermaid .node.clickable .nodeLabel,
+.mermaid .node.clickable text {
+  text-decoration: none !important;
+}

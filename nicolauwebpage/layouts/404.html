@@ -1,0 +1,125 @@
+{{ define "main" }}
+<style>
+  .science-404 {
+    min-height: 70vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+
+  .science-404 svg {
+    width: min(90vw, 520px);
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .science-404 .orbit {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1;
+    opacity: 0.25;
+  }
+
+  .science-404 .connection {
+    stroke: #6b8afd;
+    stroke-width: 2;
+    stroke-dasharray: 7 7;
+    animation: flow 2s linear infinite;
+  }
+
+  .science-404 .node {
+    fill: #6b8afd;
+  }
+
+  .science-404 .lost-node {
+    fill: #e76f51;
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+
+  .science-404 h1 {
+    font-size: clamp(3rem, 10vw, 6rem);
+    margin: 0;
+    letter-spacing: 0.08em;
+  }
+
+  .science-404 h2 {
+    margin-top: 0;
+  }
+
+  .science-404 p {
+    max-width: 520px;
+    margin: 1rem auto 1.5rem;
+  }
+
+  .science-404 a {
+    display: inline-block;
+    margin: 0.35rem;
+    padding: 0.7rem 1rem;
+    border: 1px solid currentColor;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+
+  .science-404 a:hover {
+    background: #6b8afd;
+    color: white;
+  }
+
+  @keyframes flow {
+    to {
+      stroke-dashoffset: -28;
+    }
+  }
+
+  @keyframes pulse {
+    50% {
+      transform: scale(1.35);
+      opacity: 0.55;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .science-404 * {
+      animation: none !important;
+    }
+  }
+</style>
+
+<section class="science-404" aria-labelledby="error-title">
+  <div>
+    <svg viewBox="0 0 520 280" role="img"
+      aria-label="A highlighted data point disconnected from a scientific network">
+      <title>Orphaned data point</title>
+
+      <ellipse class="orbit" cx="260" cy="140" rx="210" ry="100" />
+      <ellipse class="orbit" cx="260" cy="140" rx="140" ry="65" />
+
+      <line class="connection" x1="120" y1="95" x2="260" y2="140" />
+      <line class="connection" x1="260" y1="140" x2="400" y2="85" />
+      <line class="connection" x1="260" y1="140" x2="370" y2="215" />
+
+      <circle class="node" cx="120" cy="95" r="9" />
+      <circle class="node" cx="400" cy="85" r="9" />
+      <circle class="node" cx="370" cy="215" r="9" />
+
+      <circle class="lost-node" cx="260" cy="140" r="17" />
+      <text x="260" y="190" text-anchor="middle" fill="currentColor">
+        data point not found
+      </text>
+    </svg>
+
+    <h1 id="error-title">404</h1>
+    <h2>Research path interrupted</h2>
+
+    <p>
+      This page could not be located in the current dataset.
+      It may have moved, been renamed, or never passed quality control.
+    </p>
+
+    <a href="{{ .Site.Home.RelPermalink }}">Return to homepage</a>
+    <a href="/publications/">Browse publications</a>
+    <a href="/projects/">Explore projects</a>
+  </div>
+</section>
+{{ end }}
