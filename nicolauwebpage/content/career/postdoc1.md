@@ -1,7 +1,7 @@
 +++
 title= "Postdoctoral Researcher"
 startDate= 2016-07-01
-endDate= 2017-07-31
+endDate= 2018-08-31
 institution= "Universidade Federal de Santa Catarina (UFSC)"
 course= "Intestinal Immunology in Shrimp"
 logo="/images/institutions/ufsc.png"
