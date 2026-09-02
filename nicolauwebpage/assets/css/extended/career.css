@@ -1,0 +1,150 @@
+.career-timeline {
+  display: flex;
+  position: relative;
+  gap: 3rem;
+  min-height: 560px;
+  margin: 6rem 1rem;
+  padding: 0 2rem;
+  overflow-x: auto;
+  align-items: center;
+}
+
+.career-timeline::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  right: 1rem;
+  height: 4px;
+  background: var(--border);
+  transform: translateY(-50%);
+}
+
+.career-item {
+  position: relative;
+  flex: 0 0 260px;
+  height: 520px;
+}
+
+.career-marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: 20px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+  border: 5px solid var(--theme);
+  border-radius: 50%;
+  background: var(--primary);
+}
+
+.career-card {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--entry);
+}
+
+/* First, third, fifth items appear above the line */
+.career-item:nth-child(odd) .career-card {
+  bottom: calc(50% + 35px);
+}
+
+/* Second, fourth, sixth items appear below the line */
+.career-item:nth-child(even) .career-card {
+  top: calc(50% + 35px);
+}
+
+/* Small connector from the timeline to each card */
+.career-item::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 35px;
+  background: var(--border);
+  transform: translateX(-50%);
+}
+
+.career-item:nth-child(odd)::after {
+  bottom: 50%;
+}
+
+.career-item:nth-child(even)::after {
+  top: 50%;
+}
+
+.career-card h2 {
+  margin: 0.7rem 0 0.3rem;
+  font-size: 1.15rem;
+}
+
+.career-card h3 {
+  margin: 0;
+  color: var(--secondary);
+  font-size: 0.95rem;
+}
+
+.career-date {
+  margin: 0;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.institution-logo {
+  width: 100px;
+  height: 64px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+
+
+@media (max-width: 700px) {
+  .career-timeline {
+    display: block;
+    min-height: auto;
+    margin: 3rem 0;
+    padding-left: 2rem;
+    overflow: visible;
+  }
+
+  .career-timeline::before {
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    right: auto;
+    width: 3px;
+    height: auto;
+    transform: none;
+  }
+
+  .career-item {
+    height: auto;
+    min-height: 190px;
+    padding-left: 2rem;
+  }
+
+  .career-marker {
+    top: 1rem;
+    left: 10px;
+  }
+
+  .career-card,
+  .career-item:nth-child(odd) .career-card,
+  .career-item:nth-child(even) .career-card {
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+  }
+
+  .career-item::after {
+    display: none;
+  }
+}

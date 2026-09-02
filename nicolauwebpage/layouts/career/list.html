@@ -1,0 +1,38 @@
+{{ define "main" }}
+<div class="career-page">
+  <h1>{{ .Title }}</h1>
+
+  <div class="career-timeline">
+    {{ range .Pages.ByDate }}
+      <article class="career-item">
+        <div class="career-marker"></div>
+
+        <div class="career-card">
+  {{ with .Params.logo }}
+    <img
+      class="institution-logo"
+      src="{{ . | relURL }}"
+      alt="{{ $.Params.institution }} logo"
+      loading="lazy">
+  {{ end }}
+
+  <p class="career-date">
+    {{ with .Params.startDate }}
+      {{ (time .).Format "Jan 2006" }}
+    {{ end }}
+    –
+    {{ with .Params.endDate }}
+      {{ (time .).Format "Jan 2006" }}
+    {{ else }}
+      Present
+    {{ end }}
+  </p>
+
+  <h2>{{ .Title }}</h2>
+  <h3>{{ .Params.institution }}</h3>
+</div>
+      </article>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

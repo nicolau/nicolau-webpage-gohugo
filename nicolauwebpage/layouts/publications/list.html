@@ -1,0 +1,36 @@
+{{ define "main" }}
+<div class="publication-timeline">
+  <h1>{{ .Title }}</h1>
+
+  {{ range .Pages.ByDate.Reverse }}
+    <article class="timeline-item">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">
+        {{ .Date.Format "Jan 2, 2006" }}
+      </time>
+
+      <div class="timeline-marker"></div>
+
+      <div class="timeline-content">
+        <div class="publication-meta">
+          <span class="publication-type">PUBLICATION</span>
+          <span>· {{ .ReadingTime }} min read</span>
+        </div>
+
+        <h2>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h2>
+
+        {{ with .Description }}
+          <p>{{ . }}</p>
+        {{ end }}
+
+        <div class="publication-tags">
+          {{ range .Params.tags }}
+            <span>{{ . }}</span>
+          {{ end }}
+        </div>
+      </div>
+    </article>
+  {{ end }}
+</div>
+{{ end }}
