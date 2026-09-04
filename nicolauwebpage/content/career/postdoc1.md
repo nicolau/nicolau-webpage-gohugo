@@ -6,5 +6,5 @@ institution= "Universidade Federal de Santa Catarina (UFSC)"
 course= "Intestinal Immunology in Shrimp"
 logo="/images/institutions/ufsc.png"
 description= "Research on host–pathogen interactions and computational biology."
-weight= 1
+weight= 4
 +++

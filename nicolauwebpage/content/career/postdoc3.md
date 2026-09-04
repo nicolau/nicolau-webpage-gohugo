@@ -6,5 +6,5 @@ institution= "Instituto Butantan"
 course= "Host-Pathogen Interactions"
 logo="/images/institutions/butantan.png"
 description= "Research on host–pathogen interactions and computational biology."
-weight= 1
+weight= 6
 +++

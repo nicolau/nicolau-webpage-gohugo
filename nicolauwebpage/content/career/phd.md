@@ -6,5 +6,5 @@ institution= "Universidade Federal de Minas Gerais (UFMG)"
 course="Bioinformatics"
 logo="/images/institutions/ufmg.jpg"
 description= "Research on host–pathogen interactions and computational biology."
-weight= 1
+weight= 3
 +++
